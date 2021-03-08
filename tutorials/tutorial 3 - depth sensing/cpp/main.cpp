@@ -48,7 +48,8 @@ int main(int argc, char **argv) {
     // Capture 50 images and depth, then stop
     int i = 0;
     sl::Mat image, depth, point_cloud;
-
+    float distance_avg = 0;
+    int counter = 0;
     while (i < 50) {
         // A new image is available if grab() returns ERROR_CODE::SUCCESS
         if (zed.grab(runtime_parameters) == ERROR_CODE::SUCCESS) {
@@ -68,7 +69,10 @@ int main(int argc, char **argv) {
 
             if(std::isfinite(point_cloud_value.z)){
                 float distance = sqrt(point_cloud_value.x * point_cloud_value.x + point_cloud_value.y * point_cloud_value.y + point_cloud_value.z * point_cloud_value.z);
-                cout<<"Distance to Camera at {"<<x<<";"<<y<<"}: "<<distance<<"mm"<<endl;
+                distance_avg += sqrt(point_cloud_value.x * point_cloud_value.x + point_cloud_value.y * point_cloud_value.y + point_cloud_value.z * point_cloud_value.z);
+                counter += 1;
+                cout<<"Distance to Camera at {"<<x<<";"<<y<<"}: "<< distance<<"mm"<<endl;
+                cout<<"Avg. Distance to Camera at {"<<x<<";"<<y<<"}: "<<(float) (distance_avg / counter)<<"mm"<<endl;
             }else
                 cout<<"The Distance can not be computed at {"<<x<<";"<<y<<"}"<<endl;           
 

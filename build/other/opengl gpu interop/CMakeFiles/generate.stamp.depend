@@ -1,0 +1,12 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/ZED SDK/zed-config-version.cmake
+C:/Program Files (x86)/ZED SDK/zed-config.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA/select_compute_arch.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindGLEW.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindGLUT.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindOpenGL.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindPackageMessage.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/SelectLibraryConfigurations.cmake
+D:/zed codes/zed-examples/other/opengl gpu interop/CMakeLists.txt

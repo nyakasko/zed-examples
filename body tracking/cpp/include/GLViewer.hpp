@@ -134,6 +134,7 @@ struct ObjectClassName {
 	sl::float3 position;
 	std::string name_lineA;
 	std::string name_lineB;
+	std::string name_lineC;
 	sl::float4 color;
 };
 
@@ -165,7 +166,7 @@ private:
 	static void idle();
 
 	bool available;
-	bool drawBbox = false;
+	bool drawBbox = true;
 
 	enum MOUSE_BUTTON {
 		LEFT = 0,

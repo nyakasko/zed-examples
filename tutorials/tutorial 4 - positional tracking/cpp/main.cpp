@@ -83,10 +83,12 @@ int main(int argc, char **argv) {
 
                 //get filtered orientation quaternion
                 auto imu_orientation = sensor_data.imu.pose.getOrientation();
+                auto imu_translation = sensor_data.imu.pose.getTranslation();
                 // get raw acceleration
                 auto acceleration = sensor_data.imu.linear_acceleration;
 
                 cout << "IMU Orientation: {" << zed_orientation << "}, Acceleration: {" << acceleration << "}\n";
+                cout << "IMU Translation: {" << imu_translation << "}\n";
             }
             i++;
         }

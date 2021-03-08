@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AEF39E06-351E-3150-8B72-CAFB427AAF78}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\zed codes\zed-examples\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/zed codes/zed-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\goncz\cmake-3.19.4-win64-x64\bin\cmake.exe "-SD:/zed codes/zed-examples" "-BD:/zed codes/zed-examples/build" --check-stamp-file "D:/zed codes/zed-examples/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\zed codes\zed-examples\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/zed codes/zed-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\goncz\cmake-3.19.4-win64-x64\bin\cmake.exe "-SD:/zed codes/zed-examples" "-BD:/zed codes/zed-examples/build" --check-stamp-file "D:/zed codes/zed-examples/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\zed codes\zed-examples\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/zed codes/zed-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\goncz\cmake-3.19.4-win64-x64\bin\cmake.exe "-SD:/zed codes/zed-examples" "-BD:/zed codes/zed-examples/build" --check-stamp-file "D:/zed codes/zed-examples/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\zed codes\zed-examples\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/zed codes/zed-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\goncz\cmake-3.19.4-win64-x64\bin\cmake.exe "-SD:/zed codes/zed-examples" "-BD:/zed codes/zed-examples/build" --check-stamp-file "D:/zed codes/zed-examples/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\goncz\cmake-3.19.4-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;D:\zed codes\zed-examples\build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\zed codes\zed-examples\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\ZERO_CHECK.vcxproj">
+      <Project>{6FA3C4AB-80A3-3239-A89F-5BBAE2CB95D6}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\body tracking\cpp\ZED_Body_Tracking_Viewer.vcxproj">
+      <Project>{B2D3AA3E-B2B6-3DC2-B574-F458DEAF1E33}</Project>
+      <Name>ZED_Body_Tracking_Viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\other\cuda refocus\ZED_CUDA_Refocus.vcxproj">
+      <Project>{AE0118D2-1616-30A3-99B9-64ACD94DCC74}</Project>
+      <Name>ZED_CUDA_Refocus</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\camera control\cpp\ZED_Camera_Control.vcxproj">
+      <Project>{5193C691-0943-3ADD-8B98-F5C23B1267E3}</Project>
+      <Name>ZED_Camera_Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\depth sensing\cpp\ZED_Depth_Sensing.vcxproj">
+      <Project>{35F26E13-F184-3BF9-88B4-A803DDC83D32}</Project>
+      <Name>ZED_Depth_Sensing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\other\multi camera\cpp\ZED_Multi_Camera.vcxproj">
+      <Project>{58295445-3E06-3536-9500-B6A13ECB1724}</Project>
+      <Name>ZED_Multi_Camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\object detection\birds eye viewer\cpp\ZED_Object_detection_birds_eye_viewer.vcxproj">
+      <Project>{4E2F29B2-74CF-3F9C-AD3F-848D2D0AC323}</Project>
+      <Name>ZED_Object_detection_birds_eye_viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\object detection\image viewer\cpp\ZED_Object_detection_image_viewer.vcxproj">
+      <Project>{3D8F84CF-6D77-3D6F-8E33-FDE2BFD202C7}</Project>
+      <Name>ZED_Object_detection_image_viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\plane detection\cpp\ZED_Plane_Detection.vcxproj">
+      <Project>{ED7E8814-20E7-33C6-9603-B0EC09018741}</Project>
+      <Name>ZED_Plane_Detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\spatial mapping\advanced point cloud mapping\cpp\ZED_Point_Cloud_Mapping.vcxproj">
+      <Project>{35C96EE1-94B8-3E88-B4D4-7648FB4BB09E}</Project>
+      <Name>ZED_Point_Cloud_Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\positional tracking\cpp\ZED_Positional_Tracking.vcxproj">
+      <Project>{64F272F3-A406-3B1A-A2B5-7C7CD18B3610}</Project>
+      <Name>ZED_Positional_Tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\svo recording\export\cpp\ZED_SVO_Export.vcxproj">
+      <Project>{56DEA7AD-23F1-329B-9DDC-C00EBF95E3AE}</Project>
+      <Name>ZED_SVO_Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\svo recording\playback\cpp\ZED_SVO_Playback.vcxproj">
+      <Project>{B6E512D1-CA52-36BB-9A5B-9246A976EAB8}</Project>
+      <Name>ZED_SVO_Playback</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\svo recording\recording\cpp\ZED_SVO_Recording.vcxproj">
+      <Project>{EF54B818-E56E-3D94-953D-1AACEAC3CABF}</Project>
+      <Name>ZED_SVO_Recording</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\spatial mapping\basic\cpp\ZED_Spatial_Mapping.vcxproj">
+      <Project>{5D15A3DD-CE1B-3369-80FA-1A7995008DED}</Project>
+      <Name>ZED_Spatial_Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\camera streaming\receiver\cpp\ZED_Streaming_Receiver.vcxproj">
+      <Project>{D39BEE1E-3221-30FE-8387-2E6CCAA84055}</Project>
+      <Name>ZED_Streaming_Receiver</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\camera streaming\sender\cpp\ZED_Streaming_Sender.vcxproj">
+      <Project>{F264C32D-F340-3143-8207-79A3D971D6C0}</Project>
+      <Name>ZED_Streaming_Sender</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 1 - hello ZED\cpp\ZED_Tutorial_1.vcxproj">
+      <Project>{65C38EDB-5341-3A0E-B5DC-1F04498EADD0}</Project>
+      <Name>ZED_Tutorial_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 2 - image capture\cpp\ZED_Tutorial_2.vcxproj">
+      <Project>{F5562AE6-8FAB-3AAC-BF67-DB53C3129EAB}</Project>
+      <Name>ZED_Tutorial_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 3 - depth sensing\cpp\ZED_Tutorial_3.vcxproj">
+      <Project>{68C496F3-D5BD-3FE1-B072-ACE4B0128E44}</Project>
+      <Name>ZED_Tutorial_3</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 4 - positional tracking\cpp\ZED_Tutorial_4.vcxproj">
+      <Project>{C002DCF3-50FB-33D9-812A-45BA0063A7F3}</Project>
+      <Name>ZED_Tutorial_4</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 5 - spatial mapping\cpp\ZED_Tutorial_5.vcxproj">
+      <Project>{0602292B-AB20-3910-8789-4E423D832F49}</Project>
+      <Name>ZED_Tutorial_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 6 - object detection\cpp\ZED_Tutorial_6.vcxproj">
+      <Project>{FDDC7DCC-FEF7-3E09-A105-A6C54DBD2D57}</Project>
+      <Name>ZED_Tutorial_6</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\tutorials\tutorial 7 - sensor data\cpp\ZED_Tutorial_7.vcxproj">
+      <Project>{E97D9FBF-3F85-375C-9D48-3D3029D833C3}</Project>
+      <Name>ZED_Tutorial_7</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\zed codes\zed-examples\build\other\opengl gpu interop\ZED_openGL.vcxproj">
+      <Project>{AC8F1C1B-7818-3E7C-81CC-679756A34AC4}</Project>
+      <Name>ZED_openGL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

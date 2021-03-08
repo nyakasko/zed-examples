@@ -9,8 +9,10 @@
 
 #include <GL/glew.h>
 #include <GL/freeglut.h>
-
+#include <cuda.h>
+#include <cuda_gl_interop.h>
 #include <list>
+#include "utils.hpp"
 
 #ifndef M_PI
 #define M_PI 3.141592653f
@@ -118,9 +120,20 @@ public:
     Simple3DObject(sl::Translation position, bool isStatic);
     ~Simple3DObject();
 
+    void addPt(sl::float3 pt);
+    void addClr(sl::float4 clr);
+
     void addPoint(float x, float y, float z, float r, float g, float b);
+    void addPoint(float x, float y, float z, float r, float g, float b, float a);
     void addLine(sl::float3 p1, sl::float3 p2, sl::float3 clr);
     void addPoint(sl::float3 position, sl::float3 color);
+
+    // New 3D rendering
+    void addFullEdges(std::vector<sl::float3>& pts, sl::float4 clr);
+    void addVerticalEdges(std::vector<sl::float3>& pts, sl::float4 clr);
+    void addTopFace(std::vector<sl::float3>& pts, sl::float4 clr);
+    void addVerticalFaces(std::vector<sl::float3>& pts, sl::float4 clr);
+
     void pushToGPU();
     void clear();
 
@@ -176,6 +189,12 @@ public:
     void draw();
 };
 
+struct ObjectClassName {
+    sl::float3 position;
+    std::string name;
+    sl::float4 color;
+};
+
 // This class manages input events, window and Opengl rendering pipeline
 class GLViewer {
 public:
@@ -194,6 +213,7 @@ public:
     bool chunksUpdated() {
         return chunks_pushed;
     }
+    void updateData(std::vector<sl::ObjectData>& objs, sl::Transform& cam_pose);
 
     void exit();
 private:
@@ -207,6 +227,8 @@ private:
     void clearInputs();
     
     void printText();
+    void createBboxRendering(std::vector<sl::float3>& bbox, sl::float4 bbox_clr);
+    void createIDRendering(sl::float3& center, sl::float4 clr, unsigned int id);
 
     // Glut functions callbacks
     static void drawCallback();
@@ -236,6 +258,13 @@ private:
     Simple3DObject zedModel;
     Simple3DObject zedPath; 
     std::vector<sl::float3> vecPath;
+
+    std::vector<ObjectClassName> objectsName;
+    Simple3DObject BBox_edges;
+    Simple3DObject BBox_faces;
+    Simple3DObject skeletons;
+    Simple3DObject floor_grid;
+    sl::Transform cam_pose;
 
     std::mutex mtx;
     bool updateZEDposition = false;;

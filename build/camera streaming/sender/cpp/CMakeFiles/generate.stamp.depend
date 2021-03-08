@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/ZED SDK/zed-config-version.cmake
+C:/Program Files (x86)/ZED SDK/zed-config.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA/select_compute_arch.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindPackageMessage.cmake
+D:/zed codes/zed-examples/camera streaming/sender/cpp/CMakeLists.txt

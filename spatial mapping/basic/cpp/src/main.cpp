@@ -36,7 +36,7 @@ using namespace std;
 using namespace sl;
 
 // set to 0 to create a Fused Point Cloud
-#define CREATE_MESH 1
+#define CREATE_MESH 0
 
 void parseArgs(int argc, char **argv,sl::InitParameters& param);
 
@@ -122,7 +122,7 @@ int main(int argc, char** argv) {
                     // Configure Spatial Mapping parameters
 					spatial_mapping_parameters.resolution_meter = SpatialMappingParameters::get(SpatialMappingParameters::MAPPING_RESOLUTION::LOW);
                     spatial_mapping_parameters.use_chunk_only = true;
-                    spatial_mapping_parameters.save_texture = false;
+                    spatial_mapping_parameters.save_texture = true;
 #if CREATE_MESH
 					spatial_mapping_parameters.map_type = SpatialMappingParameters::SPATIAL_MAP_TYPE::MESH;
 #else

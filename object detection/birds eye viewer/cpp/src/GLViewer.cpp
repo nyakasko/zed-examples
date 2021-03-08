@@ -5,10 +5,14 @@
 #if defined(_DEBUG) && defined(_WIN32)
 //#error "This sample should not be built in Debug mode, use RelWithDebInfo if you want to do step by step."
 #endif
+//const char* cmd = "ffmpeg -r 29 -f rawvideo -pix_fmt rgba -s 720x404 -i - "
+//"-preset slow -y -pix_fmt yuv420p -vf vflip output.mp4"; // 1728x972
 
+// open pipe to ffmpeg's stdin in binary write mode
+//FILE* ffmpeg = _popen(cmd, "wb");
 #define FADED_RENDERING
 const float grid_size = 10.0f;
-
+int ffmpeg_width, ffmpeg_height;
 GLchar* VERTEX_SHADER =
         "#version 330 core\n"
         "layout(location = 0) in vec3 in_Vertex;\n"
@@ -88,6 +92,9 @@ Simple3DObject createFrustum(sl::CameraParameters param) {
     cam_4.z = Z_;
     cam_4.x = (0 - param.cx) * Z_ *fx_;
     cam_4.y = (param.image_size.height - param.cy) * Z_ *fy_;
+    std::cout << param.image_size.width << " " << param.image_size.height << std::endl;
+    ffmpeg_width = param.image_size.width;
+    ffmpeg_height = param.image_size.height;
 
     sl::float4 clr(0.8f, 0.5f, 0.2f, 1.0f);
     it.addTriangle(cam_0, cam_1, cam_2, clr);
@@ -267,6 +274,7 @@ void GLViewer::createIDRendering(sl::float3 & center, sl::float4 clr, unsigned i
 
 void GLViewer::update() {
     if (keyStates_['q'] == KEY_STATE::UP || keyStates_['Q'] == KEY_STATE::UP || keyStates_[27] == KEY_STATE::UP) {
+        // _pclose(ffmpeg);
         currentInstance_->exit();
         return;
     }
@@ -305,7 +313,10 @@ void GLViewer::update() {
             camera_.setOffsetFromPosition(camera_.getOffsetFromPosition() * MOUSE_DZ_SENSITIVITY);
         }
     }
-
+    //int* buffer = new int[ffmpeg_width * ffmpeg_height];
+    //glutSwapBuffers();
+    //glReadPixels(0, 0, ffmpeg_width, ffmpeg_height, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+    //fwrite(buffer, sizeof(int) * ffmpeg_width * ffmpeg_height, 1, ffmpeg);
     camera_.update();
     mtx.lock();
     // Update point cloud buffers

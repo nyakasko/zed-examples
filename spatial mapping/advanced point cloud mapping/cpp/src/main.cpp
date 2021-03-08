@@ -43,7 +43,11 @@ int main(int argc, char **argv) {
     Camera zed;
     // Set configuration parameters for the ZED
     InitParameters init_parameters;
-    init_parameters.depth_mode = DEPTH_MODE::ULTRA;    
+
+    init_parameters.camera_resolution = RESOLUTION::HD2K;
+    init_parameters.depth_maximum_distance = 10.0f * 1000.0f;
+
+    init_parameters.depth_mode = DEPTH_MODE::ULTRA;
     init_parameters.coordinate_system = COORDINATE_SYSTEM::RIGHT_HANDED_Y_UP; // OpenGL's coordinate system is right_handed    
     parse_args(argc, argv, init_parameters);
 
@@ -56,11 +60,9 @@ int main(int argc, char **argv) {
         return EXIT_FAILURE;
     }
 
-    auto camera_infos = zed.getCameraInformation();
-
     // Point cloud viewer
     GLViewer viewer;
-
+    auto camera_infos = zed.getCameraInformation();
     // Initialize point cloud viewer
     FusedPointCloud map;
     GLenum errgl = viewer.init(argc, argv, camera_infos.camera_configuration.calibration_parameters.left_cam, &map, camera_infos.camera_model);
@@ -78,6 +80,35 @@ int main(int argc, char **argv) {
         zed.close();
         return EXIT_FAILURE;
     }
+
+    // Define the Objects detection module parameters
+    ObjectDetectionParameters detection_parameters;
+    detection_parameters.enable_tracking = true;
+    detection_parameters.enable_mask_output = false; // designed to give person pixel mask
+    detection_parameters.detection_model = DETECTION_MODEL::MULTI_CLASS_BOX_ACCURATE;
+
+
+    print("Object Detection: Loading Module...");
+    returned_state = zed.enableObjectDetection(detection_parameters);
+    if (returned_state != ERROR_CODE::SUCCESS) {
+        print("enableObjectDetection", returned_state, "\nExit program.");
+        zed.close();
+        return EXIT_FAILURE;
+    }
+
+    // Detection runtime parameters
+    // default detection threshold, apply to all object class
+    int detection_confidence = 50;
+    ObjectDetectionRuntimeParameters detection_parameters_rt(detection_confidence);
+    // To select a set of specific object classes:
+    detection_parameters_rt.object_class_filter = {/*OBJECT_CLASS::VEHICLE,*/ OBJECT_CLASS::PERSON };
+    // To set a specific threshold
+    detection_parameters_rt.object_class_detection_confidence_threshold[OBJECT_CLASS::PERSON] = detection_confidence;
+    //detection_parameters_rt.object_class_detection_confidence_threshold[OBJECT_CLASS::VEHICLE] = detection_confidence;
+
+    // Detection output
+    Objects objects;
+
 
     // Set spatial mapping parameters
     SpatialMappingParameters spatial_mapping_parameters;
@@ -111,17 +142,23 @@ int main(int argc, char **argv) {
     while (viewer.isAvailable()) {
         // Grab a new image
         if (zed.grab(runtime_parameters) == ERROR_CODE::SUCCESS) {
+
+            returned_state = zed.retrieveObjects(objects, detection_parameters_rt);
+
+            //if (!objects.object_list.empty())
+            //std::cout << objects.object_list[0].label << std::endl;
+
             // Retrieve the left image
             zed.retrieveImage(image_zed, VIEW::LEFT, MEM::CPU, display_resolution);
             // Retrieve the camera pose data
             tracking_state = zed.getPosition(pose);
             viewer.updatePose(pose, tracking_state);
-
+            viewer.updateData(objects.object_list, pose.pose_data);
             if (tracking_state == POSITIONAL_TRACKING_STATE::OK) {                
                 auto duration = chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - ts_last).count();
                 
                 // Ask for a fused point cloud update if 500ms have elapsed since last request
-                if((duration > 500) && viewer.chunksUpdated()) {
+                if((duration > 100) && viewer.chunksUpdated()) {
                     // Ask for a point cloud refresh
                     zed.requestSpatialMapAsync();
                     ts_last = chrono::high_resolution_clock::now();

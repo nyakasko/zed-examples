@@ -97,13 +97,13 @@ int main(int argc, char **argv) {
 
     // Detection runtime parameters
     // default detection threshold, apply to all object class
-    int detection_confidence = 35;
+    int detection_confidence = 50;
     ObjectDetectionRuntimeParameters detection_parameters_rt(detection_confidence);
     // To select a set of specific object classes:
-    detection_parameters_rt.object_class_filter = {OBJECT_CLASS::VEHICLE, OBJECT_CLASS::PERSON};
+    detection_parameters_rt.object_class_filter = {/*OBJECT_CLASS::VEHICLE,*/ OBJECT_CLASS::PERSON};
     // To set a specific threshold
     detection_parameters_rt.object_class_detection_confidence_threshold[OBJECT_CLASS::PERSON] = detection_confidence;
-    detection_parameters_rt.object_class_detection_confidence_threshold[OBJECT_CLASS::VEHICLE] = detection_confidence;
+    //detection_parameters_rt.object_class_detection_confidence_threshold[OBJECT_CLASS::VEHICLE] = detection_confidence;
 
     // Detection output
     Objects objects;
@@ -162,14 +162,14 @@ int main(int argc, char **argv) {
 
         if ((returned_state == ERROR_CODE::SUCCESS) && objects.is_new) {
 #if ENABLE_GUI
-
             zed.retrieveMeasure(point_cloud, MEASURE::XYZRGBA, MEM::GPU, pc_resolution);
+
             zed.getPosition(cam_pose, REFERENCE_FRAME::WORLD);
             viewer.updateData(point_cloud, objects.object_list, cam_pose.pose_data);
 
             zed.retrieveImage(image_left, VIEW::LEFT, MEM::CPU, display_resolution);
             // as image_left_ocv is a ref of image_left, it contains directly the new grabbed image
-            render_2D(image_left_ocv, img_scale, objects.object_list, true);
+            //render_2D(image_left_ocv, img_scale, objects.object_list, true);
             zed.getPosition(cam_pose, REFERENCE_FRAME::CAMERA);
             // update birds view of tracks based on camera position and detected objects
             track_view_generator.generate_view(objects, cam_pose, image_track_ocv, objects.is_tracked);

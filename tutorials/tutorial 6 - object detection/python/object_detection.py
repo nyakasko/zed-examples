@@ -39,6 +39,7 @@ def main():
         exit(1)
 
     obj_param = sl.ObjectDetectionParameters()
+    print (obj_param.detection_model)
     obj_param.enable_tracking=True
     obj_param.image_sync=True
     obj_param.enable_mask_output=True

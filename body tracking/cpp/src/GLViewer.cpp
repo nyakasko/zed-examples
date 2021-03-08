@@ -1,10 +1,15 @@
 #include "GLViewer.hpp"
 #include <random>
+#include <stdio.h>
 
 #if defined(_DEBUG) && defined(_WIN32)
 #error "This sample should not be built in Debug mode, use RelWithDebInfo if you want to do step by step."
 #endif
+const char* cmd = "ffmpeg -r 24 -f rawvideo -pix_fmt rgba -s 1920x1080 -i - "
+"-preset slow -y -pix_fmt yuv420p -vf vflip output.mp4"; // 1728x972
 
+// open pipe to ffmpeg's stdin in binary write mode
+FILE* ffmpeg = _popen(cmd, "wb");
 GLchar* VERTEX_SHADER =
 "#version 330 core\n"
 "layout(location = 0) in vec3 in_Vertex;\n"
@@ -269,13 +274,20 @@ void GLViewer::updateView(sl::Mat image, sl::Objects &objects) {
 						for (int i = 4; i < 8; i++)
 							bb_[i].y = (floor_plane_eq.x * bb_[i].x + floor_plane_eq.z * bb_[i].z + floor_plane_eq.w) / (floor_plane_eq.y * -1.f);
 					}
-					BBox_obj.addBoundingBox(bb_, clr_id);
+					// BBox_obj.addBoundingBox(bb_, clr_id);
 
 					objectsName.emplace_back();
 					objectsName.back().name_lineA = "ID : " + std::to_string(obj.id);
 					std::stringstream ss_vel;
 					ss_vel << std::fixed << std::setprecision(1) << obj.velocity.norm();
 					objectsName.back().name_lineB = ss_vel.str() + " m/s";
+					std::stringstream posi_x;
+					std::stringstream posi_y;
+					std::stringstream posi_z;
+					posi_x << std::fixed << std::setprecision(1) << obj.position.x;
+					posi_y << std::fixed << std::setprecision(1) << obj.position.y;
+					posi_z << std::fixed << std::setprecision(1) << obj.position.z;
+					objectsName.back().name_lineC = "Position : x: " + posi_x.str() + " m y: " + posi_y.str() + " m z: " + posi_z.str() + " m";
 					objectsName.back().color = clr_id;
 					objectsName.back().position = obj.position;
 					objectsName.back().position.y = (bb_[0].y + bb_[1].y + bb_[2].y + bb_[3].y) / 4.f + 0.2f;
@@ -284,12 +296,18 @@ void GLViewer::updateView(sl::Mat image, sl::Objects &objects) {
 		}
 	}
 
+	int* buffer = new int[image.getWidth() * image.getHeight()];
+	glutSwapBuffers();
+	glReadPixels(0, 0, image.getWidth(), image.getHeight(), GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+	fwrite(buffer, sizeof(int) * image.getWidth() * image.getHeight(), 1, ffmpeg);
 	mtx.unlock();
 }
 
 void GLViewer::update() {
-	if (keyStates_['q'] == KEY_STATE::UP || keyStates_['Q'] == KEY_STATE::UP || keyStates_[27] == KEY_STATE::UP)
+	if (keyStates_['q'] == KEY_STATE::UP || keyStates_['Q'] == KEY_STATE::UP || keyStates_[27] == KEY_STATE::UP) {
+		_pclose(ffmpeg);
 		currentInstance_->exit();
+	}
 
 	if (keyStates_['b'] == KEY_STATE::UP || keyStates_['B'] == KEY_STATE::UP)
 		currentInstance_->drawBbox = !currentInstance_->drawBbox;
@@ -345,6 +363,12 @@ void GLViewer::printText() {
 
 		string = it.name_lineB.c_str();
 		glWindowPos2f(pt2d.x - 40, pt2d.y);
+		len = (int)strlen(string);
+		for (int i = 0; i < len; i++)
+			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, string[i]);
+
+		string = it.name_lineC.c_str();
+		glWindowPos2f(pt2d.x - 40, pt2d.y + 40);
 		len = (int)strlen(string);
 		for (int i = 0; i < len; i++)
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, string[i]);

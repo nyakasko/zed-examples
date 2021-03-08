@@ -64,6 +64,7 @@ if __name__ == "__main__":
                 translation = camera_pose.get_translation(py_translation)
                 text_rotation = str((round(rotation[0], 2), round(rotation[1], 2), round(rotation[2], 2)))
                 text_translation = str((round(translation.get()[0], 2), round(translation.get()[1], 2), round(translation.get()[2], 2)))
+                print (text_translation)
                 pose_data = camera_pose.pose_data(sl.Transform())
             viewer.updateData(pose_data, text_translation, text_rotation, tracking_state)
 

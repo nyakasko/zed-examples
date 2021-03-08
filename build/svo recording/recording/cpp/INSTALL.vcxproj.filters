@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\zed codes\zed-examples\build\CMakeFiles\1ea442f7aff423e1d6f023000b67582c\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{24FDCFD9-5CB4-3710-915A-A07D5C22F518}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

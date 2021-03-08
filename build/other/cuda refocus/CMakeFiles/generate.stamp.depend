@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/ZED SDK/zed-config-version.cmake
+C:/Program Files (x86)/ZED SDK/zed-config.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA/run_nvcc.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindCUDA/select_compute_arch.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindGLEW.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindGLUT.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindOpenGL.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/FindPackageMessage.cmake
+D:/goncz/cmake-3.19.4-win64-x64/share/cmake-3.19/Modules/SelectLibraryConfigurations.cmake
+D:/zed codes/zed-examples/build/other/cuda refocus/CMakeFiles/ZED_CUDA_Refocus.dir/src/ZED_CUDA_Refocus_generated_dof_gpu.cu.obj.cmake.pre-gen
+D:/zed codes/zed-examples/build/other/cuda refocus/CMakeFiles/ZED_CUDA_Refocus.dir/src/ZED_CUDA_Refocus_generated_dof_gpu.cu.obj.depend
+D:/zed codes/zed-examples/other/cuda refocus/CMakeLists.txt

@@ -254,12 +254,15 @@ void GLViewer::updateView(sl::Mat image, sl::Objects &objs)
 				auto clr_class = getColorClass((int)objs.object_list[i].label);
 				auto clr_id = generateColorId(objs.object_list[i].id);
 
-				if (objs.object_list[i].tracking_state != sl::OBJECT_TRACKING_STATE::OK)
+				if (objs.object_list[i].tracking_state != sl::OBJECT_TRACKING_STATE::OK) {
 					clr_id = clr_class;
+				}
+
 				else 
 				{
 					sl::float3 pos(objs.object_list[i].position.x, objs.object_list[i].bounding_box[0].y, objs.object_list[i].position.z);
 					createIDRendering(pos, clr_id, objs.object_list[i].id);
+					printText();
 				}
 				createBboxRendering(bb_, clr_id);
 			}

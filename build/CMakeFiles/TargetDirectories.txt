@@ -1,0 +1,77 @@
+D:/zed codes/zed-examples/build/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/CMakeFiles/ZERO_CHECK.dir
+D:/zed codes/zed-examples/build/camera control/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/camera control/cpp/CMakeFiles/ZED_Camera_Control.dir
+D:/zed codes/zed-examples/build/camera control/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/depth sensing/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/depth sensing/cpp/CMakeFiles/ZED_Depth_Sensing.dir
+D:/zed codes/zed-examples/build/depth sensing/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/object detection/image viewer/cpp/CMakeFiles/ZED_Object_detection_image_viewer.dir
+D:/zed codes/zed-examples/build/object detection/image viewer/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/object detection/image viewer/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/object detection/birds eye viewer/cpp/CMakeFiles/ZED_Object_detection_birds_eye_viewer.dir
+D:/zed codes/zed-examples/build/object detection/birds eye viewer/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/object detection/birds eye viewer/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/body tracking/cpp/CMakeFiles/ZED_Body_Tracking_Viewer.dir
+D:/zed codes/zed-examples/build/body tracking/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/body tracking/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/plane detection/cpp/CMakeFiles/ZED_Plane_Detection.dir
+D:/zed codes/zed-examples/build/plane detection/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/plane detection/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/positional tracking/cpp/CMakeFiles/ZED_Positional_Tracking.dir
+D:/zed codes/zed-examples/build/positional tracking/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/positional tracking/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/spatial mapping/basic/cpp/CMakeFiles/ZED_Spatial_Mapping.dir
+D:/zed codes/zed-examples/build/spatial mapping/basic/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/spatial mapping/basic/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/svo recording/export/cpp/CMakeFiles/ZED_SVO_Export.dir
+D:/zed codes/zed-examples/build/svo recording/export/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/svo recording/export/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/svo recording/playback/cpp/CMakeFiles/ZED_SVO_Playback.dir
+D:/zed codes/zed-examples/build/svo recording/playback/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/svo recording/playback/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/svo recording/recording/cpp/CMakeFiles/ZED_SVO_Recording.dir
+D:/zed codes/zed-examples/build/svo recording/recording/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/svo recording/recording/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/camera streaming/receiver/cpp/CMakeFiles/ZED_Streaming_Receiver.dir
+D:/zed codes/zed-examples/build/camera streaming/receiver/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/camera streaming/receiver/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/camera streaming/sender/cpp/CMakeFiles/ZED_Streaming_Sender.dir
+D:/zed codes/zed-examples/build/camera streaming/sender/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/camera streaming/sender/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/spatial mapping/advanced point cloud mapping/cpp/CMakeFiles/ZED_Point_Cloud_Mapping.dir
+D:/zed codes/zed-examples/build/spatial mapping/advanced point cloud mapping/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/spatial mapping/advanced point cloud mapping/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/other/cuda refocus/CMakeFiles/ZED_CUDA_Refocus.dir
+D:/zed codes/zed-examples/build/other/cuda refocus/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/other/cuda refocus/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/other/opengl gpu interop/CMakeFiles/ZED_openGL.dir
+D:/zed codes/zed-examples/build/other/opengl gpu interop/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/other/opengl gpu interop/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/other/multi camera/cpp/CMakeFiles/ZED_Multi_Camera.dir
+D:/zed codes/zed-examples/build/other/multi camera/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/other/multi camera/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 1 - hello ZED/cpp/CMakeFiles/ZED_Tutorial_1.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 1 - hello ZED/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 1 - hello ZED/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 2 - image capture/cpp/CMakeFiles/ZED_Tutorial_2.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 2 - image capture/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 2 - image capture/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 3 - depth sensing/cpp/CMakeFiles/ZED_Tutorial_3.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 3 - depth sensing/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 3 - depth sensing/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 4 - positional tracking/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 4 - positional tracking/cpp/CMakeFiles/ZED_Tutorial_4.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 4 - positional tracking/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 5 - spatial mapping/cpp/CMakeFiles/ZED_Tutorial_5.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 5 - spatial mapping/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 5 - spatial mapping/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 6 - object detection/cpp/CMakeFiles/ZED_Tutorial_6.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 6 - object detection/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 6 - object detection/cpp/CMakeFiles/ALL_BUILD.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 7 - sensor data/cpp/CMakeFiles/ZED_Tutorial_7.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 7 - sensor data/cpp/CMakeFiles/INSTALL.dir
+D:/zed codes/zed-examples/build/tutorials/tutorial 7 - sensor data/cpp/CMakeFiles/ALL_BUILD.dir
